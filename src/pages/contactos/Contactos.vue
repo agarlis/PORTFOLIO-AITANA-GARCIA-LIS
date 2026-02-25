@@ -5,7 +5,7 @@
 
 <template>
 
-<h1>PORTADA</h1>
+<h1>CONTACTOS</h1>
 
 
 </template>

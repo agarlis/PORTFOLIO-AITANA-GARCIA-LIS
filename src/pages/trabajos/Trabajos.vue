@@ -4,10 +4,10 @@
 </script>
 
 <template>
-
-<h1>PORTADA</h1>
-
-
+  <div>
+    <h1>TRABAJOS</h1>
+  
+  </div>
 </template>
 
 <style scoped>
