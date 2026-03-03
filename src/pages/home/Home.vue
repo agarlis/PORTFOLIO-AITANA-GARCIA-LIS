@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from "vue"
-import { Menu } from 'lucide-vue-next';
+import { Menu } from "lucide-vue-next";
 import LogoGarlisDesing from '@/components/LogoGarlis.Desing.vue'
 
 
@@ -15,7 +15,7 @@ const menuAbierto = ref(false)
                 <LogoGarlisDesing estilos="text-[#5E4B3C] sm:w-[4rem] md:w-[6rem] lg:w-[8rem] transition-all"/>
             </div>
 
-            <div class="hidden md:flex gap-8 tracking-widest">
+            <div class="hidden md:flex gap-8 tracking-widest text-[#5E4B3C]">
                 <Button class="Button">
                     <RouterLink to="/Trabajos">Trabajos</RouterLink>
                 </Button>
@@ -50,7 +50,7 @@ const menuAbierto = ref(false)
             <img 
               src="/image/fotoaitana.png"
               alt=""
-              class="absolute right-[19%] w-[0px] sm:w-[0px] md:w-[320px] lg:w-[450px] object-cover z-10 duration-500 ease-out hover:scale-125 transition-all"
+              class="foto absolute right-[19%] w-[0px] sm:w-[0px] md:w-[320px] lg:w-[450px] object-cover z-10 duration-500 ease-out hover:scale-125 transition-all"
             />
       <span class="portfolio text-1xl sm:text-1xl md:text-2xl lg:text-3xl transition-all">Portfolio</span>
     </div>
@@ -59,14 +59,12 @@ const menuAbierto = ref(false)
         Aitana<br>Garcia
     </h1>
 
-    <div 
-        class="frase mt-4 text-base sm:text-base md:text-lg lg:text-xl text-[#5E4B3C] transition-all">
-    <p>Diseño que conecta</p>
+    <div class="frase mt-4 text-base sm:text-base md:text-lg lg:text-xl text-[#5E4B3C] transition-all">
+        <p>Diseño que conecta</p>
+    </div>
   </div>
-
-  </div>
-
     </section>
+    
 </template>
 
 <style scoped>
@@ -101,10 +99,10 @@ const menuAbierto = ref(false)
     font-family: montserrat;
     font-weight: 400;
 }
-.menu:hover{
 
+.foto:hover{
+    filter: drop-shadow(1px 1px 10px black);
 }
-
 
 .rama {
     font-family: bodonimodaitalic;
@@ -154,8 +152,7 @@ const menuAbierto = ref(false)
 
 .Button:hover{
     font-family: montserrat;
-    font-weight: 800;
-    background: rgba(255, 255, 255, 0.25);
+    font-weight: 700;
     transform: scale(1.05);
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
 }
