@@ -58,7 +58,10 @@ export const proyectos: Project[] = [
     descripcion: "Mind Pop es un juego de mesa diseñado para acercar el autocuidado emocional de forma amena y dinámica. Por medio de retos, dibujos, mímica… y mucho humor, los jugadores ejercitan la empatía, la expresión emocional y la autorreflexión.",
     concepto: "",
     proceso: "",
-    herramientas: ["Blender", "Illustrator", "Photoshop"]
+    herramientas: [
+      "Blender", 
+      "Illustrator", 
+      "Photoshop"]
   },
 ];
 

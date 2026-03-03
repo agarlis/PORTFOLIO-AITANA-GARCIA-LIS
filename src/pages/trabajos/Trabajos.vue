@@ -24,12 +24,12 @@ const menuAbierto = ref(false)
 <template>
   <div class="grid grid-rows-[auto_1fr_auto] min-h-screen">
     <header>
-      <nav class="overflow-hidden absolute w-full flex justify-between items-center px-8 py-4 text-sm uppercase tracking-widest transition-all">
-        <div class="">
-          <LogoGarlisDesing estilos="w-0 w-[7rem]"/>
+      <nav class="bg-[#F3EBDD] overflow-hidden absolute w-full flex justify-between items-center px-8 py-4 text-sm uppercase tracking-widest transition-all">
+        <div class="text-[#5E4B3C]">
+          <LogoGarlisDesing estilos="w-0 sm:w-[5rem] md:w-[6rem] lg:w-[7rem] transition-all"/>
         </div>
 
-        <div class="hidden md:flex gap-8 tracking-widest">
+        <div class="hidden md:flex gap-8 tracking-widest text-[#5E4B3C]">
           <Button class="Button">
             <RouterLink to="/Home">
               Portada
@@ -58,7 +58,7 @@ const menuAbierto = ref(false)
         </div>
 
         <button 
-          class="iconoboton block flex align-center justify-center md:hidden lg:hidden text-3xl" 
+          class="iconoboton text-[#5E4B3C] block flex align-center justify-center md:hidden lg:hidden text-3xl" 
           @click="menuAbierto = !menuAbierto">
             <Menu class="w-5 h-5" />
         </button>
@@ -66,20 +66,20 @@ const menuAbierto = ref(false)
 
         <div 
           v-if="menuAbierto"
-          class="menu absolute top-[80px] tracking-widest right-8 flex flex-col gap-4 bg-white/20 backdrop-blur-md p-6 rounded-2xl shadow-lg md:hidden z-50">
+          class="absolute top-[80px] tracking-widest right-8 flex flex-col gap-4 bg-white/20 text-white backdrop-blur-md p-6 rounded-2xl shadow-lg md:hidden z-50">
               <RouterLink to="/Trabajos" @click="menuAbierto = false">Trabajos</RouterLink>
               <RouterLink to="/SobreMi" @click="menuAbierto = false">Sobre mi</RouterLink>
               <RouterLink to="/Contactos" @click="menuAbierto = false">Contacto</RouterLink>
         </div>
     </header>
 
-    <main class="py-45 flex justify-center px-8">
-      <div class="grid grid-cols-4 gap-8">
+    <main class="bg-[#362821] py-45 flex justify-center px-8">
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <Card 
           v-for="proyecto in proyectos" 
           :key="proyecto.id"
           @click="irAlProyecto(proyecto.id)"
-          class="w-[250px]">
+          class="w-[250px] overflow-hidden cursor-pointer hover:scale-105 transition bg-[#F3EBDD]">
           <img 
             :src="`/image/${proyecto.imagen}`" 
             :alt="proyecto.nombre"
@@ -98,7 +98,7 @@ const menuAbierto = ref(false)
       
     </main>
 
-    <footer class="footer text-center w-full py-4">
+    <footer class="footer text-center bg-[#362821] text-[#F3EBDD] w-full py-4">
       <p> © 2026 · Aitana García Lis · Portfolio </p> 
     </footer>
   </div>
