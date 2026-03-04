@@ -94,15 +94,11 @@ const menuAbierto = ref(false)
             </h1>
             
             <p class="texto mb-10">
-              {{ proyecto.concepto}}
-            </p>
-
-            <p class="texto mb-10">
               {{ proyecto.descripcion}}
             </p>
 
             <p class="texto mb-10">
-              {{ proyecto.proceso}}
+              {{ proyecto.concepto}}
             </p>
 
             <p class="texto mb-2">
