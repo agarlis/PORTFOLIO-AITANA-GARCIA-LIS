@@ -148,7 +148,7 @@ const menuAbierto = ref(false)
     font-family: montserrat;
     font-weight: 500;
     width: 100px;
-    height: 120%;
+    height: 20px;
     border-radius: 50px;
     display: flex;
     align-items: center;
