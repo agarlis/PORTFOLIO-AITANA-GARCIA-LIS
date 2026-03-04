@@ -20,9 +20,10 @@ const cambiarImagen = (index: number) => {
 const menuAbierto = ref(false)
 </script>
 
+
 <template>
   <header>
-        <nav class="bg-[#F3EBDD] overflow-hidden absolute w-full flex justify-between items-center px-8 py-4 text-sm uppercase tracking-widest transition-all">
+    <nav class="bg-[#F3EBDD] overflow-hidden absolute w-full flex justify-between items-center px-8 py-4 text-sm uppercase tracking-widest transition-all">
           <div class="text-[#5E4B3C]">
             <LogoGarlisDesing estilos="w-0 sm:w-[5rem] md:w-[6rem] lg:w-[7rem] transition-all"/>
           </div>
@@ -68,84 +69,72 @@ const menuAbierto = ref(false)
                 <RouterLink to="/Trabajos" @click="menuAbierto = false">Trabajos</RouterLink>
                 <RouterLink to="/SobreMi" @click="menuAbierto = false">Sobre mi</RouterLink>
                 <RouterLink to="/Contactos" @click="menuAbierto = false">Contacto</RouterLink>
-          </div>
-<main>
-
-<div v-if="proyecto" class="min-h-screen px-8 py-50">
-
-      <!-- BLOQUE SUPERIOR -->
-      <div class="grid lg:grid-cols-2 gap-20 items-center max-w-6xl mx-auto">
-
-        <!-- TEXTO -->
-        <div class="">
-          <h1 class="nproyecto text-9xl mb-4">
-           /0{{ proyecto.id }}/
-          </h1>
-
-          <h1 class="nombre text-6xl mb-10 ">
-            {{ proyecto.nombre }}
-          </h1>
-
-          <h1 class="asignatura text-4xl mb-2">
-            ({{ proyecto.asignatura }})
-          </h1>
-
-          <h1 class="categoria text-xl mb-10">
-            #{{ proyecto.categoria }}
-          </h1>
-          
-          <p class=" mb-10">
-            {{ proyecto.concepto}}
-          </p>
-
-          <p class=" mb-10">
-            {{ proyecto.descripcion}}
-          </p>
-
-          <p class=" mb-10">
-            {{ proyecto.proceso}}
-          </p>
-
-          <p class="mb-2">
-            {{ proyecto.herramientas }}
-          </p>
-
-          <p class="">
-            {{ proyecto.year}}
-          </p>
         </div>
-
-        <!-- IMAGEN PRINCIPAL -->
-        <div class="flex justify-center">
-          <img
-            :src="`/public/image/${proyecto.imagen}`"
-            :alt="proyecto.nombre"
-            class="w-[600px] object-contain"
-          />
-        </div>
-
-      </div>
-
-      <!-- SEPARADOR -->
-      <div class="my-24 border-t border-[#362821]/20"></div>
-
-      <!-- CARRUSEL -->
-      <div class="max-w-6xl mx-auto">
-        <div class="flex gap-6 overflow-x-auto pb-4">
-          <img
-            v-for="(foto, index) in proyecto.galeria"
-            :key="index"
-            :src="`/public/image/${foto}`"
-            class="w-[300px] cursor-pointer transition hover:scale-105"
-          />
-        </div>
-      </div>
-    </div>
-
-</main>
-    
   </header>
+  <main>
+    <div 
+      v-if="proyecto" 
+      class="bg-[#F3EBDD] min-h-screen px-8 py-50 text">
+        <div class="grid lg:grid-cols-2 gap-20 items-center max-w-6xl mx-auto">
+          <div class="text-[#5E4B3C]">
+            <h1 class="nproyecto text-9xl mb-4">
+            /0{{ proyecto.id }}/
+            </h1>
 
+            <h1 class="nombre text-7xl mb-10 ">
+              {{ proyecto.nombre }}
+            </h1>
+
+            <h1 class="asignatura text-3xl mb-2">
+              {{ proyecto.asignatura }}
+            </h1>
+
+            <h1 class="categoria text-xl mb-10">
+              #{{ proyecto.categoria }}
+            </h1>
+            
+            <p class="texto mb-10">
+              {{ proyecto.concepto}}
+            </p>
+
+            <p class="texto mb-10">
+              {{ proyecto.descripcion}}
+            </p>
+
+            <p class="texto mb-10">
+              {{ proyecto.proceso}}
+            </p>
+
+            <p class="texto mb-2">
+              {{ proyecto.herramientas }}
+            </p>
+
+            <p class="texto">
+              {{ proyecto.year}}
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <img
+              :src="`/public/image/${proyecto.imagen}`"
+              :alt="proyecto.nombre"
+              class="w-[600px] object-contain"
+            />
+          </div>
+        </div>
+        <div class="my-24 border-t border-[#362821]/20"></div>
+        <div class="max-w-6xl mx-auto">
+          <div class="flex gap-6 overflow-x-auto pb-4">
+            <img
+              v-for="(foto, index) in proyecto.galeria"
+              :key="index"
+              :src="`/public/image/${foto}`"
+              class="w-[300px] cursor-pointer transition hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
+
+  </main>
 
   <footer class="footer text-center text-[#362821] bg-[#F3EBDD] w-full py-4">
       <p> © 2026 · Aitana García Lis · Portfolio </p> 
@@ -196,12 +185,23 @@ const menuAbierto = ref(false)
 
 .asignatura{
   font-family: montserrat;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .categoria{
   font-family: montserrat;
-  font-weight: 300;
+  font-weight: 500;
+}
+
+.texto{
+  font-family: montserrat;
+  font-weight: 200;
+}
+
+.footer{
+  font-family: montserrat;
+  font-weight: 100;
+  font-size: small;
 }
 
 </style>
