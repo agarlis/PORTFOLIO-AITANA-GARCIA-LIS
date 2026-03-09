@@ -16,9 +16,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox"
 
 import LogoGarlisDesing from '@/components/LogoGarlis.Desing.vue'
-import { Menu } from "lucide-vue-next";
-
-import { Instagram, Linkedin } from 'lucide-vue-next';
+import { Menu, Instagram } from "lucide-vue-next";
 
 import {
   Popover,

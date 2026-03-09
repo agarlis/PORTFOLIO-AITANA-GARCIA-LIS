@@ -28,7 +28,10 @@ export const proyectos: Project[] = [
     ],	
     descripcion: "Áureo es una marca de chocolate que nace de la tradición familiar.",
     concepto: "Áureo es una propuesta de identidad y packaging para una marca de chocolate que busca transmitir naturalidad, calidez y calidad artesanal. El diseño se basa en una paleta cromática inspirada en los propios ingredientes y sabores del producto. Las formas orgánicas y suaves evocan la textura del cacao y crean una identidad visual coherente entre las diferentes variedades. El resultado es un sistema de packaging minimalista que comunica cercanía, elegancia y autenticidad.",
-    herramientas: ["Packdora", "Illustrator", "Canva"]
+    herramientas: [
+      "herramientas/iconoillustrator.png", 
+      "herramientas/iconopacdora.png",
+    ]
 },
 {
     id: 2,
@@ -56,9 +59,10 @@ export const proyectos: Project[] = [
     descripcion: "Mind Pop es un juego de mesa de autocuidado emocional.",
     concepto: "Mind Pop es un juego de mesa diseñado para abordar la salud mental desde una perspectiva lúdica y accesible. A través de personajes, cartas y dinámicas de juego, el proyecto busca visibilizar emociones, dificultades y procesos psicológicos de forma simbólica. La identidad gráfica utiliza ilustraciones expresivas y colores vibrantes que refuerzan el carácter cercano y dinámico del juego. El diseño combina entretenimiento y reflexión, creando una experiencia participativa que fomenta la conversación sobre el bienestar emocional.",
     herramientas: [
-      "Blender", 
-      "Illustrator", 
-      "Photoshop"]
+      "herramientas/iconoblender.png", 
+      "herramientas/iconoillustrator.png", 
+      "herramientas/iconophotoshop.png",
+    ]
   },
   {
     id: 3,
@@ -79,8 +83,8 @@ export const proyectos: Project[] = [
     descripcion: "The fold es una marca creada para espacios de coworking y libreria.",
     concepto: "The Fold es un proyecto de identidad visual para una librería y espacio de co-working que combina cultura, lectura y trabajo creativo. El diseño se centra en una estética tipográfica elegante y contemporánea que transmite calma, sofisticación y carácter editorial. La identidad busca reflejar un espacio donde las ideas se pliegan, se conectan y se transforman, igual que las páginas de un libro. El resultado es una marca sutil y minimalista que refuerza el concepto de comunidad creativa.",
     herramientas: [
-"Illustrator", 
-"Photoshop"
+    "herramientas/iconoillustrator.png", 
+    "herramientas/iconophotoshop.png",
 ]
   },
   {
@@ -99,8 +103,8 @@ export const proyectos: Project[] = [
     descripcion: "Adaptación y maquetación del libro alicia en el pais de las maravillas",
     concepto: "Este proyecto consiste en el rediseño editorial del clásico Alicia en el País de las Maravillas. La propuesta visual reinterpreta el universo fantástico del relato mediante ilustraciones coloridas y una estética infantil que resalta el carácter imaginativo de la historia. La composición y el uso del color acompañan la narrativa, transportando al lector al mundo surrealista de Alicia. El resultado es una edición visualmente atractiva que combina literatura clásica con un enfoque gráfico contemporáneo. ",
     herramientas: [
-"Illustrator", 
-"Photoshop"
+    "herramientas/iconoillustrator.png", 
+    "herramientas/iconophotoshop.png",
 ]
   },
   {
@@ -118,8 +122,8 @@ export const proyectos: Project[] = [
     descripcion: "Creación de logo y cartel para el I Congreso Iberoamericano de Creación y Fabricación Digital",
     concepto: "Consiste en el diseño del cartel para el I Congreso Iberoamericano de Creación y Fabricación Digital. La propuesta visual se construye a partir de formas abstractas y degradados cromáticos que evocan procesos digitales, innovación y experimentación tecnológica. La composición tipográfica prioriza la claridad de la información y la jerarquía visual del evento. El resultado es una pieza gráfica contemporánea que comunica el carácter tecnológico y creativo del congreso.",
     herramientas: [
-"Illustrator", 
-"Photoshop"
+    "herramientas/iconoillustrator.png", 
+    "herramientas/iconophotoshop.png",
 ]
   },
   {
@@ -138,7 +142,8 @@ export const proyectos: Project[] = [
     descripcion: "Revista para diseñadores, únicamente con un color y tipografía",
     concepto: "Este proyecto editorial aborda la relación entre la salud mental y la práctica del diseño, explorando los factores que influyen en el bienestar de los profesionales creativos. El diseño se centra en una estética limpia y estructurada que facilita la lectura y organiza la información de forma clara. El uso del color actúa como elemento de contraste y refuerza la identidad visual de la publicación. El resultado es una pieza editorial que combina investigación, reflexión y diseño contemporáneo.",
     herramientas: [
-"Indesing"
+      "herramientas/iconoindesing.png",
+      "herramientas/iconophotoshop.png",
 ]
   },
   {
@@ -159,9 +164,9 @@ export const proyectos: Project[] = [
     descripcion: "Diseño y organización de la boda de Cristina y Jorge",
     concepto: "Este proyecto consiste en el diseño de la identidad gráfica para una boda, desarrollando una línea visual coherente aplicada a invitaciones, papelería y detalles para los invitados. La propuesta se inspira en una estética natural y elegante, utilizando ilustraciones botánicas y una paleta de tonos suaves que evocan cercanía y delicadeza. La tipografía combina elegancia y legibilidad para transmitir un carácter romántico y atemporal. El resultado es una identidad visual cuidada que acompaña y refuerza la experiencia del evento.",
     herramientas: [
-"Indesing",
-"Illustrator",
-"Procreate",
+"herramientas/iconoindesing.png",
+"herramientas/iconoillustrator.png", 
+"herramientas/iconoprocreate.png", 
 ]
   },
   {
@@ -184,9 +189,9 @@ export const proyectos: Project[] = [
     descripcion: "Campaña intergeneracional con creacion de spot, carteles, folletos",
     concepto: "Esta campaña gráfica parte de situaciones cotidianas que generan frustración compartida para convertirlas en un punto de conexión entre las personas. A través de ilustraciones expresivas y un tono visual cercano y humorístico, el proyecto muestra cómo aquello que nos molesta también puede unirnos. La composición combina tipografía contundente e ilustración para transmitir el mensaje de forma directa y memorable. El resultado es una campaña visual que transforma pequeñas incomodidades en una reflexión sobre la empatía y la conexión colectiva.",
     herramientas: [
-"Indesing",
-"Illustrator",
-"Procreate",
+"herramientas/iconoindesing.png",
+"herramientas/iconoillustrator.png", 
+"herramientas/iconoprocreate.png", 
 ]
   },
 ];

@@ -9,10 +9,10 @@ const menuAbierto = ref(false)
 
 <template>
     <section class="relative min-h-screen bg-[#F3EBDD] overflow-hidden ">
-        <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-5 text-sm uppercase tracking-widest transition-all">
+        <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-4 text-sm uppercase tracking-widest transition-all">
           
             <div class="text-[#5E4B3C]">
-                <LogoGarlisDesing estilos="text-[#5E4B3C] sm:w-[4rem] md:w-[6rem] lg:w-[8rem] transition-all"/>
+                <LogoGarlisDesing estilos="text-[#5E4B3C] sm:w-[4rem] md:w-[6rem] lg:w-[7rem] transition-all"/>
             </div>
 
             <div class="hidden md:flex gap-8 tracking-widest text-[#5E4B3C]">

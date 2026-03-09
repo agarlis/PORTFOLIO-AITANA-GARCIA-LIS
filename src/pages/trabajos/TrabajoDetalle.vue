@@ -12,12 +12,23 @@ const proyecto = computed(() => {
   return proyectos.find(p => p.id === Number(route.params.id))
 })
 
-const imagenActiva = ref(0)
 
-const cambiarImagen = (index: number) => {
-  imagenActiva.value = index
-}
 const menuAbierto = ref(false)
+
+const imagenGrande = ref<string | null>(null)
+
+const abrirImagen = (foto: string) => {
+  imagenGrande.value = foto
+}
+
+const cerrarImagen = () => {
+  imagenGrande.value = null
+}
+
+const esImagenHerramienta = (herramienta: string) => {
+  return /\.(png|jpe?g|webp|svg|gif)$/i.test(herramienta)
+}
+
 </script>
 
 
@@ -101,9 +112,22 @@ const menuAbierto = ref(false)
               {{ proyecto.concepto}}
             </p>
 
-            <p class="texto mb-2">
-              {{ proyecto.herramientas }}
-            </p>
+            <div class="flex flex-wrap gap-3 mb-6">
+              <template v-for="(herramienta, index) in proyecto.herramientas" :key="index">
+                <img
+                  v-if="esImagenHerramienta(herramienta)"
+                  :src="`/image/${herramienta}`"
+                  :alt="`Herramienta ${index + 1}`"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+                <span
+                  v-else
+                  class="px-3 py-1 rounded-full border border-[#5E4B3C]/30 text-sm"
+                >
+                  {{ herramienta }}
+                </span>
+              </template>
+            </div>
 
             <p class="texto">
               {{ proyecto.year}}
@@ -111,7 +135,7 @@ const menuAbierto = ref(false)
           </div>
           <div class="flex justify-center">
             <img
-              :src="`/public/image/${proyecto.imagen}`"
+              :src="`/image/${proyecto.imagen}`"
               :alt="proyecto.nombre"
               class="w-[600px] object-contain"
             />
@@ -121,16 +145,28 @@ const menuAbierto = ref(false)
         <div class="max-w-6xl mx-auto">
           <div class="flex gap-6 overflow-x-auto pb-4">
             <img
-              v-for="(foto, index) in proyecto.galeria"
+               v-for="(foto, index) in proyecto.galeria"
               :key="index"
-              :src="`/public/image/${foto}`"
+              :src="`/image/${foto}`"
               class="w-[300px] cursor-pointer transition hover:scale-105"
+              @click="abrirImagen(foto)"
             />
           </div>
         </div>
       </div>
 
   </main>
+
+  <div
+  v-if="imagenGrande"
+  class="fixed inset-0 bg-black/80 flex items-center justify-center z-[100]"
+  @click="cerrarImagen"
+>
+  <img
+    :src="`/image/${imagenGrande}`"
+    class="max-w-[90vw] max-h-[90vh] object-contain"
+  />
+</div>
 
   <footer class="footer text-center text-[#362821] bg-[#F3EBDD] w-full py-4">
       <p> © 2026 · Aitana García Lis · Portfolio </p> 
