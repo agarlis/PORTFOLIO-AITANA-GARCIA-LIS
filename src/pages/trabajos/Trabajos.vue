@@ -92,7 +92,7 @@ const seleccionarCategoria = (categoria: string) => {
         </div>
     </header>
 
-    <main class="bg-[#F3EBDD] py-45 flex flex-col items-center px-8 gap-10">
+    <main class="bg-[#F3EBDD] pt-45 pb-14 md:pb-16 flex flex-col items-center px-8 gap-10">
       <section class="relative flex flex-col items-center gap-3 text-[#5E4B3C]">
         <p class="categorias-titulo">Categorías</p>
         <button

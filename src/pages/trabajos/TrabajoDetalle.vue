@@ -85,9 +85,9 @@ const esImagenHerramienta = (herramienta: string) => {
   <main>
     <div 
       v-if="proyecto" 
-      class="bg-[#F3EBDD] min-h-screen px-8 py-50 text">
+      class="bg-[#F3EBDD] min-h-screen px-8 pt-50 pb-14 md:pb-16 text">
         <div class="grid lg:grid-cols-2 gap-20 items-center max-w-6xl mx-auto">
-          <div class="text-[#5E4B3C]">
+          <div class="text-[#5E4B3C] text-justify">
             <h1 class="nproyecto text-9xl mb-4">
             /0{{ proyecto.id }}/
             </h1>

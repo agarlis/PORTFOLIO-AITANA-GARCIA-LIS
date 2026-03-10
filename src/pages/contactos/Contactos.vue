@@ -101,7 +101,7 @@ const menuAbierto = ref(false)
                 <RouterLink to="/Contactos" @click="menuAbierto = false">Contacto</RouterLink>
             </div>
 
-    <section class="bg-[#F3EBDD] text-[#5E4B3C] min-h-screen px-8 md:px-20 py-45">
+    <section class="bg-[#F3EBDD] text-[#5E4B3C] min-h-screen px-8 md:px-20 pt-45 pb-14 md:pb-16">
         <div class="max-w-2xl mb-10">
             <h2 class="titulo text-6xl md:text-5xl font-light mb-6">
                 Hablemos.

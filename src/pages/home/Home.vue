@@ -52,7 +52,7 @@ const menuAbierto = ref(false)
               alt=""
               class="foto absolute right-[19%] w-[0px] sm:w-[0px] md:w-[320px] lg:w-[450px] object-cover z-10 duration-500 ease-out hover:scale-125 transition-all"
             />
-      <span class="portfolio text-1xl sm:text-1xl md:text-2xl lg:text-3xl transition-all">Portfolio</span>
+      <span class="portfolio text-3xl sm:text-3xl md:text-4xl lg:text-5xl transition-all">Porfolio</span>
     </div>
 
     <h1 class="nombre mt-4 text-7xl sm:text-7xl md:text-8xl lg:text-[9rem] text-[#3A2A20] transition-all">
