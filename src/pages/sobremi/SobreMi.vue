@@ -136,7 +136,7 @@ function starStyle(nivel: number, idx: number) {
         </div>
       </section>
       <!-- Sección de historial académico -->
-      <section class="max-w-6xl mx-auto px-8 mb-15 md:px-12 lg:px-16">
+      <section class="max-w-6xl mx-auto px-8 mb-[3.75rem] md:px-12 lg:px-16">
         <section class="educacion-card">
           <h2 class="educacion-titulo">
             HISTORIAL

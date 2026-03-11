@@ -47,7 +47,7 @@ const form = ref({
 </script>
 
 <template>
-    <div class="grid md:grid-cols-2 gap-30">
+    <div class="grid gap-12 md:grid-cols-2 md:gap-[7.5rem]">
             <Card class="bg-[#F3EBDD] border-none shadow-none">
                 <CardContent class="space-y-8 p-2">
                     <form @submit.prevent="submitForm" class="space-y-6">

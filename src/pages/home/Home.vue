@@ -7,7 +7,7 @@ import MenuBotonesYLogo from "../MenuBotonesYLogo.vue";
         <!-- Botones y logo -->
         <MenuBotonesYLogo class=" text-[#5E4B3C]"/>
         <!-- Contenido principal -->
-        <div class="flex h-full flex-col justify-start px-8 pt-70 lg:pt-30 md:pt-50 sm:pt-70 transition-all">
+        <div class="flex h-full flex-col justify-start px-8 pt-[17.5rem] md:pt-[12.5rem] lg:pt-[7.5rem] transition-all">
             <div class="flex justify-between text-xl text-[#5E4B3C]">
                 <span class="rama sm:text-1xl md:text-2xl lg:text-3xl transition-all">
                     Graphic Designer
@@ -15,7 +15,7 @@ import MenuBotonesYLogo from "../MenuBotonesYLogo.vue";
                 <img 
                     src="/image/fotoaitana.png"
                     alt="Aitana Garcia"
-                    class="foto absolute right-[19%] w-0 sm:w-0 md:w-[320px] lg:w-112.5 object-cover z-10 duration-500 ease-out hover:scale-125 transition-all"
+                    class="foto absolute right-[19%] hidden md:block md:w-[320px] lg:w-[28rem] object-cover z-10 duration-500 ease-out hover:scale-125 transition-all"
                 />
                 <span class="portfolio text-3xl sm:text-3xl md:text-4xl lg:text-5xl transition-all">
                     Porfolio

@@ -2,6 +2,7 @@
 import { computed, ref } from "vue"
 import { useRoute } from "vue-router"
 import { Menu } from "lucide-vue-next"
+import { Button } from "@/components/ui/button"
 
 import LogoGarlisDesing from "@/components/LogoGarlis.Desing.vue"
 
@@ -23,13 +24,13 @@ const enPortada = computed(() => route.path === "/")
                 <RouterLink to="/">Portada</RouterLink>
             </Button>
             <Button class="Button">
-                <RouterLink to="/Trabajos" active-class="font-bold">Trabajos</RouterLink>
+                <RouterLink to="/trabajos" active-class="font-bold">Trabajos</RouterLink>
             </Button>
             <Button class="Button">
-                <RouterLink to="/SobreMi" active-class="font-bold">Sobre mi</RouterLink>
+                <RouterLink to="/sobremi" active-class="font-bold">Sobre mi</RouterLink>
             </Button>
             <Button class="Button">
-                <RouterLink to="/Contactos" active-class="font-bold">Contacto</RouterLink>
+                <RouterLink to="/contactos" active-class="font-bold">Contacto</RouterLink>
             </Button>
         </div>
         <!-- Botón del menú -->
@@ -43,10 +44,10 @@ const enPortada = computed(() => route.path === "/")
     <div
         v-if="menuAbierto"
         class="menu absolute top-20 right-8 z-50 flex flex-col gap-4 rounded-2xl bg-white/20 p-6 tracking-widest backdrop-blur-md shadow-lg md:hidden">
-            <RouterLink v-if="!enPortada" to="/Home" @click="menuAbierto = false">Portada</RouterLink>
-            <RouterLink to="/Trabajos" @click="menuAbierto = false">Trabajos</RouterLink>
-            <RouterLink to="/SobreMi" @click="menuAbierto = false">Sobre mi</RouterLink>
-            <RouterLink to="/Contactos" @click="menuAbierto = false">Contacto</RouterLink>
+            <RouterLink v-if="!enPortada" to="/" @click="menuAbierto = false">Portada</RouterLink>
+            <RouterLink to="/trabajos" @click="menuAbierto = false">Trabajos</RouterLink>
+            <RouterLink to="/sobremi" @click="menuAbierto = false">Sobre mi</RouterLink>
+            <RouterLink to="/contactos" @click="menuAbierto = false">Contacto</RouterLink>
     </div>
   </section>
 </template>
@@ -70,6 +71,7 @@ const enPortada = computed(() => route.path === "/")
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   cursor: pointer;
+  color:#5E4B3C;
 }
 
 .Button:hover {

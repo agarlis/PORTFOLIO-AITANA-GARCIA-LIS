@@ -36,14 +36,14 @@ const seleccionarCategoria = (categoria: string) => {
     <section class="relative flex flex-col items-center gap-3 text-[#5E4B3C]">
       <p class="categorias-titulo">Categorías</p>
       <button
-        class="categorias-boton min-w-55"
+        class="categorias-boton min-w-[13.75rem]"
         @click="categoriasAbiertas = !categoriasAbiertas">
         {{ categoriaSeleccionada }}
       </button>
 
       <div
         v-if="categoriasAbiertas"
-        class="absolute top-23.75 z-40 w-full min-w-55 rounded-2xl border border-[#F3EBDD]/30 bg-[#F3EBDD] py-2 text-[#362821] shadow-lg">
+        class="absolute top-[5.9375rem] z-40 w-full min-w-[13.75rem] rounded-2xl border border-[#F3EBDD]/30 bg-[#F3EBDD] py-2 text-[#362821] shadow-lg">
         <button
           v-for="categoria in categorias"
           :key="categoria"
@@ -54,16 +54,16 @@ const seleccionarCategoria = (categoria: string) => {
       </div>
     </section>
 
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-15">
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[3.75rem]">
       <Card
         v-for="proyecto in proyectosFiltrados"
         :key="proyecto.id"
         @click="irAlProyecto(proyecto.id)"
-        class="w-62.5 overflow-hidden cursor-pointer hover:scale-105 transition bg-[#362821]/85">
+        class="w-[15.625rem] overflow-hidden cursor-pointer hover:scale-105 transition bg-[#362821]/85">
         <img
           :src="`/image/${proyecto.imagen}`"
           :alt="proyecto.nombre"
-          class="h-50 px-3 object-cover"
+          class="h-[12.5rem] px-3 object-cover"
         />
         <div class="text-[#F3EBDD]">
           <h1 class="titulo px-3">

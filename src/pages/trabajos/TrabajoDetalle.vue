@@ -88,7 +88,7 @@ const esImagenHerramienta = (herramienta: string) => {
                 <img
                   :src="`/image/${proyecto.imagen}`"
                   :alt="proyecto.nombre"
-                  class="w-150 object-contain"
+                  class="w-full max-w-[37.5rem] object-contain"
                 />
               </div>
           </div>
@@ -101,7 +101,7 @@ const esImagenHerramienta = (herramienta: string) => {
                 v-for="(foto, index) in proyecto.galeria"
                 :key="index"
                 :src="`/image/${foto}`"
-                class="w-75 cursor-pointer transition hover:scale-105"
+                class="w-[18.75rem] cursor-pointer transition hover:scale-105"
                 @click="abrirImagen(foto)"
               />
             </div>
@@ -110,7 +110,7 @@ const esImagenHerramienta = (herramienta: string) => {
   <!-- Ver imagenes en grande -->
   <div
     v-if="imagenGrande"
-    class="fixed inset-0 bg-black/80 flex items-center justify-center z-100"
+    class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80"
     @click="cerrarImagen">
       <img :src="`/image/${imagenGrande}`" class="max-w-[90vw] max-h-[90vh] object-contain" @click.stop/>
   </div> 
