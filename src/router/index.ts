@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 import Home from "@/pages/home/Home.vue";
 import Trabajos from "@/pages/trabajos/Trabajos.vue";
+import TrabajosLista from "@/pages/trabajos/TrabajosLista.vue";
 import TrabajoDetalle from "@/pages/trabajos/TrabajoDetalle.vue";
 import SobreMi from "@/pages/sobremi/SobreMi.vue";
 import Contactos from "@/pages/contactos/Contactos.vue";
@@ -17,11 +18,12 @@ export const router = createRouter({
     },
     {
       path: '/trabajos',
+      component: Trabajos,
       children: [
         {
           path: '',
           name: 'trabajos',
-          component: Trabajos
+          component: TrabajosLista
         },
         {
           path: ':id',

@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue"
-import { Menu } from "lucide-vue-next"
-
-import LogoGarlisDesing from "@/components/LogoGarlis.Desing.vue"
-
-const menuAbierto = ref(false)
+import MenuBotonesYLogo from "../MenuBotonesYLogo.vue";
 
 const educacion = [
   {
@@ -42,15 +38,6 @@ const habilidades = [
   "Atenta al detalle"
 ]
 
-const servicios = [
-  "Identidad visual",
-  "Branding",
-  "Packaging",
-  "Redes sociales",
-  "Diseño editorial",
-  "Fotografía",
-]
-
 const idiomas = [
   { nombre: "Español", nivel: "C1" },
   { nombre: "Valenciano", nivel: "C1" },
@@ -80,73 +67,39 @@ function starStyle(nivel: number, idx: number) {
 </script>
 
 <template>
-    <header>
-      <nav
-        class="bg-[#F3EBDD] overflow-hidden absolute w-full flex justify-between items-center px-8 py-4 text-sm uppercase tracking-widest transition-all"
-      >
-        <div class="text-[#5E4B3C]">
-          <LogoGarlisDesing estilos="w-0 sm:w-[5rem] md:w-[6rem] lg:w-[7rem] transition-all" />
-        </div>
+    <nav class="bg-[#F3EBDD] overflow-hidden">
+        <MenuBotonesYLogo class=" text-[#5E4B3C]"/>
+    </nav>
 
-        <div class="hidden md:flex gap-8 tracking-widest text-[#5E4B3C]">
-          <Button class="Button">
-            <RouterLink to="/Home">Portada</RouterLink>
-          </Button>
-
-          <Button class="Button">
-            <RouterLink to="/Trabajos" active-class="font-bold">Trabajos</RouterLink>
-          </Button>
-
-          <Button class="Button">
-            <RouterLink to="/SobreMi" active-class="font-bold">Sobre mi</RouterLink>
-          </Button>
-
-          <Button class="Button">
-            <RouterLink to="/Contactos" active-class="font-bold">Contacto</RouterLink>
-          </Button>
-        </div>
-
-        <button
-          class="iconoboton text-[#5E4B3C] block flex align-center justify-center md:hidden lg:hidden text-3xl"
-          @click="menuAbierto = !menuAbierto"
-        >
-          <Menu class="w-5 h-5" />
-        </button>
-      </nav>
-
-      <div
-        v-if="menuAbierto"
-        class="absolute top-[80px] tracking-widest right-8 flex flex-col gap-4 bg-white/20 text-[#5E4B3C] backdrop-blur-md p-6 rounded-2xl shadow-lg md:hidden z-50"
-      >
-        <RouterLink to="/Trabajos" @click="menuAbierto = false">Trabajos</RouterLink>
-        <RouterLink to="/SobreMi" @click="menuAbierto = false">Sobre mi</RouterLink>
-        <RouterLink to="/Contactos" @click="menuAbierto = false">Contacto</RouterLink>
-      </div>
-    </header>
-
-    <main class="bg-[#F3EBDD] pt-36 pb-0 md:pt-44 md:pb-0 text-[#5E4B3C]">
+    <main class="bg-[#F3EBDD] text-[#5E4B3C]">
+      <!-- Sección de presentación -->
       <section class="max-w-6xl mx-auto px-8 md:px-12 lg:px-16">
+        <!-- Información personal -->
         <div class="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 class="titulo text-4xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">Hola, soy Aitana.</h1>
+            <h1 class="titulo text-4xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+              Hola, soy Aitana.
+            </h1>
             <p class="texto text-[0.9rem] sm:text-[0.9rem] md:text-[0.95rem] lg:text-[1rem] text-justify transition-all">
               Soy estudiante de diseño gráfico con interés en crear proyectos visuales que comuniquen de forma clara, estética y con intención. 
               Me gusta entender cada proyecto como una historia: investigar, conceptualizar y transformar ideas en soluciones visuales que conecten con las personas.
             </p>
-            <p class="texto text-[0.9rem] sm:text-[0.9rem] md:text-[0.95rem] lg:text-[1rem] text-justify transition-all py-4"> Actualmente estoy formándome en diseño mientras desarrollo proyectos personales que me permiten experimentar con identidad visual, 
-              editorial y comunicación gráfica. Disfruto especialmente del proceso creativo: desde la idea inicial hasta ver cómo el diseño cobra vida. Me interesa crear trabajos con concepto, personalidad y coherencia visual. Creo que el buen diseño no solo se ve bonito, sino que transmite, organiza y aporta valor.
+            <p class="texto text-[0.9rem] sm:text-[0.9rem] md:text-[0.95rem] lg:text-[1rem] text-justify transition-all py-4"> 
+              Actualmente estoy formándome en diseño mientras desarrollo proyectos personales que me permiten experimentar con identidad visual, 
+              editorial y comunicación gráfica. Disfruto especialmente del proceso creativo: desde la idea inicial hasta ver cómo el diseño cobra vida. 
+              Me interesa crear trabajos con concepto, personalidad y coherencia visual. Creo que el buen diseño no solo se ve bonito, sino que transmite, organiza y aporta valor.
             </p>
             <p class="texto text-[0.9rem] sm:text-[0.9rem] md:text-[0.95rem] lg:text-[1rem] text-justify transition-all">
               Siempre estoy aprendiendo, explorando nuevas ideas y buscando formas de mejorar como diseñadora.
             </p>
           </div>
-
+          <!-- Imagen de presentación -->
           <div class="foto-contenedor">
             <img src="/image/fotoaitana.png" alt="Foto Aitana" class="foto-perfil " />
           </div>
         </div>
       </section>
-
+      <!-- Sección de servicios que se desplaza -->
       <section>
         <div class="marquee-wrap w-full my-14" aria-label="Servicios destacados">
           <div class="marquee-track">
@@ -182,9 +135,7 @@ function starStyle(nivel: number, idx: number) {
           </div>
         </div>
       </section>
-
-      
-
+      <!-- Sección de historial académico -->
       <section class="max-w-6xl mx-auto px-8 mb-15 md:px-12 lg:px-16">
         <section class="educacion-card">
           <h2 class="educacion-titulo">
@@ -199,9 +150,10 @@ function starStyle(nivel: number, idx: number) {
           </div>
         </section>
       </section>
-
+      <!-- Sección de skills, habilidades y idiomas -->
       <section class="bg-[#5E4B3C] w-full pt-24 pb-12 px-6 md:px-20 md:pb-14">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+        <!-- Skills -->
+        <div class="max-w-6xl grid md:grid-cols-2 gap-20 ">
           <div>
             <h2 class="tilulos text-3xl font-semibold mb-10 text-[#F3EBDD]">Skills</h2>
             <div
@@ -227,6 +179,7 @@ function starStyle(nivel: number, idx: number) {
           </div>
 
           <div class="space-y-12">
+            <!-- Habilidades personales -->
             <h2 class="tilulos textext-3xl font-semibold mb-10 text-[#F3EBDD]">Habilidades personales</h2>
             <div class="flex flex-wrap gap-4">
               <div
@@ -239,7 +192,7 @@ function starStyle(nivel: number, idx: number) {
                 {{ item }}
               </div>
             </div>
-
+            <!-- Idiomas -->
             <div>
               <h3 class="tilulos mb-5 text-[#F3EBDD]">Idiomas</h3>
               <div class="space-y-3">
@@ -258,62 +211,14 @@ function starStyle(nivel: number, idx: number) {
       </section>
     </main>
 
-    <footer class="footer text-center text-[#362821] bg-[#F3EBDD] w-full py-4">
-      <p>© 2026 · Aitana Garcia Lis · Portfolio</p>
-    </footer>
+    
+      <p class="piedepágina text-center text-[#362821] bg-[#F3EBDD] w-full py-4">
+        © 2026 · Aitana Garcia Lis · Portfolio
+      </p>
+    
 </template>
 
 <style scoped>
-.Button {
-  font-family: montserrat;
-  font-weight: 500;
-  width: 100px;
-  height: 20px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.Button:hover {
-  font-family: montserrat;
-  font-weight: 700;
-  transform: scale(1.05);
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
-}
-
-.iconoboton {
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 120%;
-  border-radius: 50px;
-  position: relative;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.iconoboton:hover {
-  font-family: montserrat;
-  font-weight: 800;
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
-}
 
 .titulo {
   font-family: bodonimodaitalic;
@@ -375,7 +280,6 @@ function starStyle(nivel: number, idx: number) {
   100% { transform: scaleX(1); }
 }
 
-/* Animación de meneo para cada estrella */
 .star-anim {
   display: inline-block;
   transform-origin: center;
@@ -463,7 +367,7 @@ function starStyle(nivel: number, idx: number) {
   font-size: 1.1rem;
 }
 
-.footer {
+.piedepágina {
   font-family: montserrat;
   font-weight: 100;
   font-size: small;
